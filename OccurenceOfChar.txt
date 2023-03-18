@@ -1,0 +1,27 @@
+package first;
+
+import java.util.Scanner;  
+public class Test6 
+{  
+public static void main(String args[])   
+{  
+String str;                                            
+int i, l;                                           
+int counter[] = new int[256];                         
+Scanner scan = new Scanner(System.in);                 
+System.out.println("Please enter a string: ");  
+str = scan.nextLine(); 
+l = str.length();  
+for (i = 0; i < l; i++)   
+{  
+counter[(int) str.charAt(i)]++;     
+}  
+for (i = 0; i < 256; i++)   
+{  
+if (counter[i] != 0)   
+{       
+System.out.println((char) i + " ==> " + counter[i]);  
+}  
+}  
+}  
+}  
